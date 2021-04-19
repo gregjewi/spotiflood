@@ -16,3 +16,6 @@ We also adjusted amplitude (volume) of notes based on their frequencies in order
 Finally, we created brief musical representations of one-year periods of flow data from the Des Moines River Basin. 
 We offer audio files of the raw, computer-generated and hydrology data-based “songs”, as well as a Python code used to create the actual audio, and a brief instrumentation of one watershed created in Finale software using the audio file converted into a MIDI. 
 Next steps will be to integrate this into a web interface that automatically limits and bins data provided by users from even more diverse sources.
+
+Below is a sample "score" to one of our compositions
+![](https://raw.githubusercontent.com/gregjewi/spotiflood/main/misc/sampleSong.png)
