@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/gregjewi/spotiflood/main/misc/spotiflood.png)
 
 Out of an interest in the interface of science and music, **this project sonifies hydrological data** from Iowa.
-This result is a **python-based workflow** where users can produce, play, and save (in wav format) music from 10 years of daily streamflow data of a currated dataset of 32 USGS gages in the Des Moines River Watershed.
+This result is a **python-based workflow** where users can produce, play, and save (in wav or midi format) music from 10 years of daily streamflow data of a currated dataset of 32 USGS gages in the Des Moines River Watershed.
 
 **Make music yourself by downloading the repo and using [`spotiflood.ipynb`](https://github.com/gregjewi/spotiflood/blob/main/spotiflood.ipynb)**
 
