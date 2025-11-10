@@ -1,0 +1,233 @@
+/* Spotiflood Custom Styles */
+
+:root {
+    --flood-green: #00D856;
+    --flood-dark-green: #00A843;
+    --flood-blue: #1E90FF;
+    --flood-light-blue: #87CEEB;
+    --flood-gray: #f8f9fa;
+    --flood-dark: #2c3e50;
+}
+
+body {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+/* Header/Banner */
+.app-header {
+    background: linear-gradient(90deg, var(--flood-green) 0%, var(--flood-blue) 100%);
+    padding: 20px 0;
+    margin-bottom: 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.app-logo {
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
+.app-header h1 {
+    color: #2f4255;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    margin: 0;
+}
+
+.app-header p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+}
+
+/* Main container */
+.container-fluid {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}
+
+/* Section headers */
+h4 {
+    color: var(--flood-dark-green);
+    border-left: 5px solid var(--flood-green);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Dropdown styling */
+.Select-control {
+    border: 2px solid var(--flood-light-blue) !important;
+    border-radius: 8px !important;
+}
+
+.Select-control:hover {
+    border-color: var(--flood-blue) !important;
+}
+
+/* Button styling */
+.btn-primary {
+    background: linear-gradient(45deg, var(--flood-green), var(--flood-dark-green)) !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(0, 216, 86, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 216, 86, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, var(--flood-blue), var(--flood-light-blue)) !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(30, 144, 255, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #dc3545, #c82333) !important;
+    border: none !important;
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.4);
+}
+
+/* Alert styling */
+.alert-success {
+    background: linear-gradient(135deg, rgba(0, 216, 86, 0.1), rgba(0, 216, 86, 0.2));
+    border-left: 4px solid var(--flood-green);
+    color: var(--flood-dark);
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.2));
+    border-left: 4px solid #ffc107;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.2));
+    border-left: 4px solid #dc3545;
+}
+
+/* Horizontal rule styling */
+hr {
+    border-top: 2px solid var(--flood-light-blue);
+    margin: 30px 0;
+}
+
+/* Form labels */
+label {
+    color: var(--flood-dark);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Input styling */
+input[type="number"] {
+    border: 2px solid var(--flood-light-blue);
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: var(--flood-blue);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(30, 144, 255, 0.25);
+}
+
+/* Checkbox styling */
+.form-check-input:checked {
+    background-color: var(--flood-green);
+    border-color: var(--flood-green);
+}
+
+/* Graph container */
+.js-plotly-plot {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* MIDI player section */
+#midi-player {
+    background: linear-gradient(135deg, rgba(0, 216, 86, 0.05), rgba(30, 144, 255, 0.05));
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#playback-status {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--flood-dark-green);
+}
+
+/* Row spacing */
+.row {
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+    
+    .app-header {
+        padding: 15px 0;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .app-logo {
+        max-height: 60px;
+    }
+    
+    .app-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .container-fluid {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding: 0 40px;
+    }
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn:active {
+    animation: pulse 0.3s ease;
+}

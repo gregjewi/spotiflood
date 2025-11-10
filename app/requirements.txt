@@ -1,0 +1,7 @@
+dash>=2.14.0
+dash-bootstrap-components>=1.5.0
+plotly>=5.18.0
+pandas>=2.0.0
+numpy>=1.24.0
+pretty-midi>=0.2.10
+requests>=2.31.0

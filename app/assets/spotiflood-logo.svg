@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 300">
+  <!-- Circle with waves icon -->
+  <circle cx="105" cy="150" r="95" fill="#00D856"/>
+  
+  <!-- Wave lines inside circle -->
+  <g fill="none" stroke="white" stroke-width="8" stroke-linecap="round">
+    <path d="M 50 130 Q 65 125, 80 130 Q 95 135, 110 130 Q 125 125, 140 130 Q 155 135, 170 130"/>
+    <path d="M 50 150 Q 65 145, 80 150 Q 95 155, 110 150 Q 125 145, 140 150 Q 155 155, 170 150"/>
+    <path d="M 50 170 Q 65 165, 80 170 Q 95 175, 110 170 Q 125 165, 140 170 Q 155 175, 170 170"/>
+  </g>
+  
+  <!-- Spotiflood text -->
+  <text x="220" y="200" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#00D856">Spotiflood</text>
+</svg>
