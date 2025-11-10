@@ -225,7 +225,7 @@ def make_track(note_list):
 
 # Function to create gauge map
 def create_gauge_map(selected_gauges=None):
-    """Create a map showing USGS gauge locations"""
+    """Create a map showing USGS gauge locations using OpenStreetMap"""
     if selected_gauges is None:
         selected_gauges = []
     
@@ -247,8 +247,8 @@ def create_gauge_map(selected_gauges=None):
                 colors.append('#1E90FF')  # Blue for unselected
                 sizes.append(10)
     
-    # Create map
-    fig = go.Figure(go.Scattergeo(
+    # Create OpenStreetMap using Scattermapbox
+    fig = go.Figure(go.Scattermapbox(
         lon=lons,
         lat=lats,
         text=names,
@@ -256,41 +256,22 @@ def create_gauge_map(selected_gauges=None):
         marker=dict(
             size=sizes,
             color=colors,
-            line=dict(width=2, color='white'),
             opacity=0.8
         ),
         hoverinfo='text',
     ))
     
-    # Update map layout with terrain basemap
-    fig.update_geos(
-        scope='usa',
-        center=dict(lat=41.5, lon=-93.5),
-        projection_scale=12,
-        showland=True,
-        landcolor='rgb(230, 230, 230)',
-        coastlinecolor='rgb(100, 100, 100)',
-        showcountries=True,
-        countrycolor='rgb(100, 100, 100)',
-        countrywidth=1.5,
-        showsubunits=True,  # Show state boundaries
-        subunitcolor='rgb(150, 150, 150)',
-        subunitwidth=2,
-        showlakes=True,
-        lakecolor='rgb(173, 216, 230)',
-        showrivers=True,
-        rivercolor='rgb(135, 206, 235)',
-        riverwidth=5,
-    )
-    
+    # Update layout for OpenStreetMap
     fig.update_layout(
+        mapbox=dict(
+            style='open-street-map',  # Use OpenStreetMap tiles
+            center=dict(lat=41.5, lon=-93.5),
+            zoom=7
+        ),
         title='Des Moines River Basin USGS Gauges',
         height=400,
         margin=dict(l=0, r=0, t=40, b=0),
-        autosize=True,
-        geo=dict(
-            bgcolor='rgb(220, 230, 240)',  # Light blue background for water
-        )
+        autosize=True
     )
     
     return fig
@@ -362,7 +343,12 @@ app.layout = html.Div([
             dcc.Graph(
                 id='gauge-map',
                 figure=create_gauge_map(),
-                config={'displayModeBar': False},
+                config={
+                    'scrollZoom': True,
+                    'displayModeBar': True,
+                    'modeBarButtonsToRemove': ['lasso2d', 'select2d'],
+                    'displaylogo': False
+                },
                 style={'height': '400px'}
             ),
         ], width=6),
